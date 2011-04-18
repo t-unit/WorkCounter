@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2DE184F135B401500F2156D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DE184E135B401500F2156D /* Cocoa.framework */; };
+		D2DE1859135B401500F2156D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1857135B401500F2156D /* InfoPlist.strings */; };
+		D2DE185C135B401500F2156D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE185B135B401500F2156D /* main.m */; };
+		D2DE185F135B401500F2156D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = D2DE185D135B401500F2156D /* Credits.rtf */; };
+		D2DE1862135B401500F2156D /* TOWorkCounterDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */; };
+		D2DE1865135B401500F2156D /* TOWorkCounterDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1863135B401500F2156D /* TOWorkCounterDocument.xib */; };
+		D2DE1868135B401600F2156D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1866135B401600F2156D /* MainMenu.xib */; };
+		D2DE1870135B423800F2156D /* TOWorkIntervall.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE186F135B423800F2156D /* TOWorkIntervall.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D2DE184A135B401500F2156D /* WorkCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2DE184E135B401500F2156D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D2DE1851135B401500F2156D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		D2DE1852135B401500F2156D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D2DE1853135B401500F2156D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2DE1856135B401500F2156D /* WorkCounter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WorkCounter-Info.plist"; sourceTree = "<group>"; };
+		D2DE1858135B401500F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D2DE185A135B401500F2156D /* WorkCounter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WorkCounter-Prefix.pch"; sourceTree = "<group>"; };
+		D2DE185B135B401500F2156D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2DE185E135B401500F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		D2DE1860135B401500F2156D /* TOWorkCounterDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOWorkCounterDocument.h; sourceTree = "<group>"; };
+		D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOWorkCounterDocument.m; sourceTree = "<group>"; };
+		D2DE1864135B401500F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TOWorkCounterDocument.xib; sourceTree = "<group>"; };
+		D2DE1867135B401600F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		D2DE186E135B423800F2156D /* TOWorkIntervall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOWorkIntervall.h; path = ../TOWorkIntervall.h; sourceTree = "<group>"; };
+		D2DE186F135B423800F2156D /* TOWorkIntervall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOWorkIntervall.m; path = ../TOWorkIntervall.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2DE1847135B401500F2156D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DE184F135B401500F2156D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D2DE183F135B401500F2156D = {
+			isa = PBXGroup;
+			children = (
+				D2DE1854135B401500F2156D /* WorkCounter */,
+				D2DE184D135B401500F2156D /* Frameworks */,
+				D2DE184B135B401500F2156D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D2DE184B135B401500F2156D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE184A135B401500F2156D /* WorkCounter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D2DE184D135B401500F2156D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE184E135B401500F2156D /* Cocoa.framework */,
+				D2DE1850135B401500F2156D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D2DE1850135B401500F2156D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE1851135B401500F2156D /* AppKit.framework */,
+				D2DE1852135B401500F2156D /* CoreData.framework */,
+				D2DE1853135B401500F2156D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		D2DE1854135B401500F2156D /* WorkCounter */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE186E135B423800F2156D /* TOWorkIntervall.h */,
+				D2DE186F135B423800F2156D /* TOWorkIntervall.m */,
+				D2DE1860135B401500F2156D /* TOWorkCounterDocument.h */,
+				D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */,
+				D2DE1863135B401500F2156D /* TOWorkCounterDocument.xib */,
+				D2DE1866135B401600F2156D /* MainMenu.xib */,
+				D2DE1855135B401500F2156D /* Supporting Files */,
+			);
+			path = WorkCounter;
+			sourceTree = "<group>";
+		};
+		D2DE1855135B401500F2156D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D2DE1856135B401500F2156D /* WorkCounter-Info.plist */,
+				D2DE1857135B401500F2156D /* InfoPlist.strings */,
+				D2DE185A135B401500F2156D /* WorkCounter-Prefix.pch */,
+				D2DE185B135B401500F2156D /* main.m */,
+				D2DE185D135B401500F2156D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D2DE1849135B401500F2156D /* WorkCounter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2DE186B135B401600F2156D /* Build configuration list for PBXNativeTarget "WorkCounter" */;
+			buildPhases = (
+				D2DE1846135B401500F2156D /* Sources */,
+				D2DE1847135B401500F2156D /* Frameworks */,
+				D2DE1848135B401500F2156D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WorkCounter;
+			productName = WorkCounter;
+			productReference = D2DE184A135B401500F2156D /* WorkCounter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2DE1841135B401500F2156D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = D2DE1844135B401500F2156D /* Build configuration list for PBXProject "WorkCounter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D2DE183F135B401500F2156D;
+			productRefGroup = D2DE184B135B401500F2156D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2DE1849135B401500F2156D /* WorkCounter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2DE1848135B401500F2156D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DE1859135B401500F2156D /* InfoPlist.strings in Resources */,
+				D2DE185F135B401500F2156D /* Credits.rtf in Resources */,
+				D2DE1865135B401500F2156D /* TOWorkCounterDocument.xib in Resources */,
+				D2DE1868135B401600F2156D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2DE1846135B401500F2156D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2DE185C135B401500F2156D /* main.m in Sources */,
+				D2DE1862135B401500F2156D /* TOWorkCounterDocument.m in Sources */,
+				D2DE1870135B423800F2156D /* TOWorkIntervall.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D2DE1857135B401500F2156D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DE1858135B401500F2156D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D2DE185D135B401500F2156D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DE185E135B401500F2156D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		D2DE1863135B401500F2156D /* TOWorkCounterDocument.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DE1864135B401500F2156D /* en */,
+			);
+			name = TOWorkCounterDocument.xib;
+			sourceTree = "<group>";
+		};
+		D2DE1866135B401600F2156D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D2DE1867135B401600F2156D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2DE1869135B401600F2156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D2DE186A135B401600F2156D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		D2DE186C135B401600F2156D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WorkCounter/WorkCounter-Prefix.pch";
+				INFOPLIST_FILE = "WorkCounter/WorkCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2DE186D135B401600F2156D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WorkCounter/WorkCounter-Prefix.pch";
+				INFOPLIST_FILE = "WorkCounter/WorkCounter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D2DE1844135B401500F2156D /* Build configuration list for PBXProject "WorkCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DE1869135B401600F2156D /* Debug */,
+				D2DE186A135B401600F2156D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2DE186B135B401600F2156D /* Build configuration list for PBXNativeTarget "WorkCounter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2DE186C135B401600F2156D /* Debug */,
+				D2DE186D135B401600F2156D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2DE1841135B401500F2156D /* Project object */;
+}
