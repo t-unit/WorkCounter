@@ -3,7 +3,7 @@
 //  WorkCounter
 //
 //  Created by Tobias Ottenweller on 4/17/11.
-//  Copyright 2011. All rights reserved.
+//
 //
 
 #import "TOWorkIntervall.h"
@@ -60,11 +60,8 @@
 }
 
 - (BOOL)isRunning
-{
-    if (start && !end)
-        return YES;
-    
-    return NO;
+{    
+    return start && !end;
 }
 
 - (void)start

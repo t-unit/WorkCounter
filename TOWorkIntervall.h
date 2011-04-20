@@ -3,7 +3,7 @@
 //  WorkCounter
 //
 //  Created by Tobias Ottenweller on 4/17/11.
-//  Copyright 2011. All rights reserved.
+//  
 //
 
 #import <Foundation/Foundation.h>
