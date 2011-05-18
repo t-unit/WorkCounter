@@ -69,7 +69,7 @@
     if (currentIntervall)
         totalTime += currentIntervall.timeWorked;
     
-    return [self secondsToString:totalTime];
+    return [TOWorkIntervall secondsToString:totalTime];
 }
 
 - (NSString *)currentTime 
@@ -78,25 +78,8 @@
     if (currentIntervall)
         totalTime = currentIntervall.timeWorked;
     
-    return [self secondsToString:totalTime];
+    return [TOWorkIntervall secondsToString:totalTime];
 }
-
-- (NSString *)secondsToString:(unsigned long)seconds
-{
-    unsigned long hours = 0, minutes = 0;
-    
-    while (seconds > 59) {
-        minutes++;
-        seconds -= 60;
-    }
-    while (minutes > 59) {
-        hours++;
-        minutes -= 60;
-    }
-    
-    return [NSString stringWithFormat:@"%02d:%02d:%02d", hours, minutes, seconds];
-}
-
 
 - (IBAction)beginEndIntervall:(id)sender 
 {
@@ -114,16 +97,41 @@
     } 
     else 
     {
-        currentIntervall = [[[TOWorkIntervall alloc] init] retain];
+        currentIntervall = [[TOWorkIntervall alloc] init];
         [currentIntervall start];
         
         [self performSelectorInBackground:@selector(syncUI) withObject:nil];
     }
 }
 
+- (IBAction)safeAsCSV:(id)sender 
+{
+    NSSavePanel *sp = [NSSavePanel savePanel];
+    
+    [sp beginSheetModalForWindow:[tableView window] 
+                 completionHandler:^(NSInteger result) {
+                     if (result != NSOKButton)
+                         return;
+                     
+                     NSString *csv = [TOWorkIntervall intervallsToCSV:intervalls];
+                     NSError *error;
+                     
+                     BOOL success =[csv writeToURL:[sp URL] atomically:YES 
+                                          encoding:NSUTF8StringEncoding 
+                                             error:&error];
+                     
+                     if (!success) {
+                         NSAlert *alert = [NSAlert alertWithError:error];
+                         [alert runModal];
+                     }
+                     
+                 }];
+}
+
 - (void)syncUI
 {
     NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
+    
     [self willChangeValueForKey:@"currentTime"];
     [self didChangeValueForKey:@"currentTime"];
     
@@ -131,6 +139,7 @@
     [self didChangeValueForKey:@"totalTime"];
     
     [pool drain];
+    
     if (currentIntervall) {
         sleep(1);
         [self syncUI];
@@ -158,7 +167,7 @@
     {
         unsigned long totalTime = [[intervalls objectAtIndex:rowIndex] timeWorked];
         
-        return [self secondsToString:totalTime];
+        return [TOWorkIntervall secondsToString:totalTime];
     }
     
     return @"";

@@ -25,8 +25,7 @@
 
 
 - (IBAction)beginEndIntervall:(id)sender;
-
-- (NSString *)secondsToString:(unsigned long)seconds;
+- (IBAction)safeAsCSV:(id)sender;
 - (void)syncUI;
 
 @end
