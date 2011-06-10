@@ -13,6 +13,7 @@
   @private
     NSMutableArray *intervalls;
     TOWorkIntervall *currentIntervall;
+    NSTimer *timer;
     
     IBOutlet NSTextField *currentTimeWorked;
     IBOutlet NSTextField *totalTimeWorked;

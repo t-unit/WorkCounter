@@ -12,7 +12,7 @@
 @implementation TOWorkIntervall
 
 
-@synthesize startDate = start, endDate = end;
+@synthesize startDate = start, endDate = end, comment;
 
 
 #pragma mark class methods
@@ -53,7 +53,7 @@
 {
     self = [super init];
     if (self) {
-        // Initialization code here.
+        comment = @"";
     }
     
     return self;
@@ -65,6 +65,7 @@
     
     start = [[decoder decodeObjectForKey:@"startDate"] retain];
     end = [[decoder decodeObjectForKey:@"endDate"] retain];
+    comment = [[decoder decodeObjectForKey:@"comment"] retain];
     
     return self;
 }
@@ -73,6 +74,7 @@
 {
     [start release];
     [end release];
+    [comment release];
     
     [super dealloc];
 }
@@ -81,6 +83,7 @@
 {
     [encoder encodeObject:start forKey:@"startDate"];
     [encoder encodeObject:end forKey:@"endDate"];
+    [encoder encodeObject:comment forKey:@"comment"];
 }
 
 - (unsigned long)timeWorked 

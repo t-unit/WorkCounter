@@ -14,12 +14,14 @@
     NSDate *start;
     NSDate *end;
     
-    NSMutableArray *comments;
+    //NSMutableArray *comments;
+    NSString *comment;
 }
 @property(readonly) NSDate *startDate;
 @property(readonly) NSDate *endDate;
 @property(readonly) unsigned long timeWorked;
 @property(readonly) BOOL isRunning;
+@property(readwrite, copy) NSString *comment;
 
 
 + (NSString *)intervallsToCSV:(NSArray *)intervalls;

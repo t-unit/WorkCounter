@@ -14,10 +14,18 @@
 - (id)init
 {
     self = [super init];
-    if (self) {
+    
+    if (self) 
         intervalls = [[NSMutableArray alloc] init];
-    }
+    
     return self;
+}
+
+- (void)dealloc
+{
+    [intervalls release];
+    
+    [super dealloc];
 }
 
 - (NSString *)windowNibName
@@ -43,11 +51,14 @@
 {
     NSMutableArray *newArray = nil;
     
-    @try {
+    @try 
+    {
         newArray = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
-    @catch (NSException *exception) {
-        if (outError) {
+    @catch (NSException *exception) 
+    {
+        if (outError) 
+        {
             NSDictionary *dic = [NSDictionary dictionaryWithObject:@"The data is corrupted." forKey:NSLocalizedFailureReasonErrorKey];
             *outError = [NSError errorWithDomain:NSOSStatusErrorDomain code:unimpErr userInfo:dic];
         }
@@ -81,12 +92,16 @@
     return [TOWorkIntervall secondsToString:totalTime];
 }
 
+
 - (IBAction)beginEndIntervall:(id)sender 
 {
     [self updateChangeCount:NSChangeDone];
     
     if (currentIntervall) 
     {
+        [timer invalidate];
+        [timer release];
+        
         [currentIntervall end];
         [intervalls addObject:currentIntervall];
         [currentIntervall release];
@@ -99,77 +114,87 @@
     {
         currentIntervall = [[TOWorkIntervall alloc] init];
         [currentIntervall start];
-        
-        [self performSelectorInBackground:@selector(syncUI) withObject:nil];
+
+        timer = [[NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(syncUI) userInfo:nil repeats:YES] retain];
+        [timer fire];
     }
 }
+
 
 - (IBAction)safeAsCSV:(id)sender 
 {
     NSSavePanel *sp = [NSSavePanel savePanel];
     
     [sp beginSheetModalForWindow:[tableView window] 
-                 completionHandler:^(NSInteger result) {
-                     if (result != NSOKButton)
-                         return;
-                     
-                     NSString *csv = [TOWorkIntervall intervallsToCSV:intervalls];
-                     NSError *error;
-                     
-                     BOOL success =[csv writeToURL:[sp URL] atomically:YES 
-                                          encoding:NSUTF8StringEncoding 
-                                             error:&error];
-                     
-                     if (!success) {
-                         NSAlert *alert = [NSAlert alertWithError:error];
-                         [alert runModal];
-                     }
-                     
-                 }];
+                 completionHandler:^(NSInteger result) 
+                    {
+                         if (result != NSOKButton)
+                             return;
+                         
+                         NSString *csv = [TOWorkIntervall intervallsToCSV:intervalls];
+                         NSError *error;
+                         
+                         BOOL success =[csv writeToURL:[sp URL] atomically:YES 
+                                              encoding:NSUTF8StringEncoding 
+                                                 error:&error];
+                         
+                         if (!success) 
+                         {
+                             NSAlert *alert = [NSAlert alertWithError:error];
+                             [alert runModal];
+                         }
+                         
+                     }];
 }
 
+
 - (void)syncUI
-{
-    NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
-    
+{    
     [self willChangeValueForKey:@"currentTime"];
     [self didChangeValueForKey:@"currentTime"];
     
     [self willChangeValueForKey:@"totalTime"];
     [self didChangeValueForKey:@"totalTime"];
-    
-    [pool drain];
-    
-    if (currentIntervall) {
-        sleep(1);
-        [self syncUI];
-    }
 }
+
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView
 {
     return [intervalls count];
 }
 
+
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
     NSString *identifier = [aTableColumn identifier];
+    id returnValue = @"";
+    
     
     if ([identifier isEqual:@"dateColumn"] || [identifier isEqual:@"startColumn"])
-    {
-        return [[intervalls objectAtIndex:rowIndex] startDate];
-    }
+        
+        returnValue = [[intervalls objectAtIndex:rowIndex] startDate];
+    
     else if ([identifier isEqual:@"endColumn"])
-    {
-        return [[intervalls objectAtIndex:rowIndex] endDate];
-    }
+        
+        returnValue = [[intervalls objectAtIndex:rowIndex] endDate];
+    
     else if ([identifier isEqual:@"timeColumn"])
     {
         unsigned long totalTime = [[intervalls objectAtIndex:rowIndex] timeWorked];
         
-        return [TOWorkIntervall secondsToString:totalTime];
+        returnValue = [TOWorkIntervall secondsToString:totalTime];
     }
     
-    return @"";
+    else if ([[aTableColumn identifier] isEqual:@"Comment"])
+        
+        returnValue = [[intervalls objectAtIndex:rowIndex] comment];
+    
+    return returnValue;
+}
+
+- (void)tableView:(NSTableView *)aTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
+{
+    if ([[aTableColumn identifier] isEqual:@"Comment"])
+        [[intervalls objectAtIndex:rowIndex] setComment:anObject];
 }
 @end
