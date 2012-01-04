@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D2376F1B14B460FE00F0CF4F /* TOWorkIntervall.m in Sources */ = {isa = PBXBuildFile; fileRef = D2376F1A14B460FE00F0CF4F /* TOWorkIntervall.m */; };
+		D2376F1D14B4618000F0CF4F /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = D2376F1C14B4618000F0CF4F /* license.txt */; };
+		D2376F1F14B4626700F0CF4F /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = D2376F1E14B4626700F0CF4F /* README.markdown */; };
 		D2DE184F135B401500F2156D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DE184E135B401500F2156D /* Cocoa.framework */; };
 		D2DE1859135B401500F2156D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1857135B401500F2156D /* InfoPlist.strings */; };
 		D2DE185C135B401500F2156D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE185B135B401500F2156D /* main.m */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		D2376F1A14B460FE00F0CF4F /* TOWorkIntervall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWorkIntervall.m; sourceTree = "<group>"; };
+		D2376F1C14B4618000F0CF4F /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = license.txt; path = ../license.txt; sourceTree = "<group>"; };
+		D2376F1E14B4626700F0CF4F /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.markdown; path = ../README.markdown; sourceTree = "<group>"; };
 		D2DE184A135B401500F2156D /* WorkCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DE184E135B401500F2156D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D2DE1851135B401500F2156D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -101,6 +105,8 @@
 		D2DE1855135B401500F2156D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D2376F1E14B4626700F0CF4F /* README.markdown */,
+				D2376F1C14B4618000F0CF4F /* license.txt */,
 				D2DE1856135B401500F2156D /* WorkCounter-Info.plist */,
 				D2DE1857135B401500F2156D /* InfoPlist.strings */,
 				D2DE185A135B401500F2156D /* WorkCounter-Prefix.pch */,
@@ -164,6 +170,8 @@
 				D2DE185F135B401500F2156D /* Credits.rtf in Resources */,
 				D2DE1865135B401500F2156D /* TOWorkCounterDocument.xib in Resources */,
 				D2DE1868135B401600F2156D /* MainMenu.xib in Resources */,
+				D2376F1D14B4618000F0CF4F /* license.txt in Resources */,
+				D2376F1F14B4626700F0CF4F /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
