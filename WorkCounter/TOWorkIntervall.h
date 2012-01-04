@@ -13,8 +13,7 @@
   @private
     NSDate *start;
     NSDate *end;
-    
-    //NSMutableArray *comments;
+
     NSString *comment;
 }
 @property(readonly) NSDate *startDate;

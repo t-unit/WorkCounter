@@ -21,6 +21,7 @@
     return self;
 }
 
+
 - (void)dealloc
 {
     [intervalls release];
@@ -28,16 +29,19 @@
     [super dealloc];
 }
 
+
 - (NSString *)windowNibName
 {
     return @"TOWorkCounterDocument";
 }
+
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
     [tableView reloadData];
 }
+
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError 
 {
@@ -46,6 +50,7 @@
     
     return [NSKeyedArchiver archivedDataWithRootObject:intervalls];
 }
+
 
 - (BOOL)readFromData:(NSData *)data ofType:(NSString *)typeName error:(NSError **)outError 
 {
@@ -70,6 +75,7 @@
     return YES;
 }
 
+
 - (NSString *)totalTime
 {
     unsigned long totalTime = 0;
@@ -82,6 +88,7 @@
     
     return [TOWorkIntervall secondsToString:totalTime];
 }
+
 
 - (NSString *)currentTime 
 {
@@ -192,9 +199,12 @@
     return returnValue;
 }
 
+
 - (void)tableView:(NSTableView *)aTableView setObjectValue:(id)anObject forTableColumn:(NSTableColumn *)aTableColumn row:(NSInteger)rowIndex
 {
     if ([[aTableColumn identifier] isEqual:@"Comment"])
         [[intervalls objectAtIndex:rowIndex] setComment:anObject];
 }
+
+
 @end

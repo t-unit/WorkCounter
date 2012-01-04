@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D2376F1B14B460FE00F0CF4F /* TOWorkIntervall.m in Sources */ = {isa = PBXBuildFile; fileRef = D2376F1A14B460FE00F0CF4F /* TOWorkIntervall.m */; };
 		D2DE184F135B401500F2156D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2DE184E135B401500F2156D /* Cocoa.framework */; };
 		D2DE1859135B401500F2156D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1857135B401500F2156D /* InfoPlist.strings */; };
 		D2DE185C135B401500F2156D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE185B135B401500F2156D /* main.m */; };
@@ -14,10 +15,10 @@
 		D2DE1862135B401500F2156D /* TOWorkCounterDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */; };
 		D2DE1865135B401500F2156D /* TOWorkCounterDocument.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1863135B401500F2156D /* TOWorkCounterDocument.xib */; };
 		D2DE1868135B401600F2156D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D2DE1866135B401600F2156D /* MainMenu.xib */; };
-		D2DE1870135B423800F2156D /* TOWorkIntervall.m in Sources */ = {isa = PBXBuildFile; fileRef = D2DE186F135B423800F2156D /* TOWorkIntervall.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D2376F1A14B460FE00F0CF4F /* TOWorkIntervall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TOWorkIntervall.m; sourceTree = "<group>"; };
 		D2DE184A135B401500F2156D /* WorkCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorkCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2DE184E135B401500F2156D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D2DE1851135B401500F2156D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -32,8 +33,7 @@
 		D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOWorkCounterDocument.m; sourceTree = "<group>"; };
 		D2DE1864135B401500F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TOWorkCounterDocument.xib; sourceTree = "<group>"; };
 		D2DE1867135B401600F2156D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D2DE186E135B423800F2156D /* TOWorkIntervall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TOWorkIntervall.h; path = ../TOWorkIntervall.h; sourceTree = "<group>"; };
-		D2DE186F135B423800F2156D /* TOWorkIntervall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TOWorkIntervall.m; path = ../TOWorkIntervall.m; sourceTree = "<group>"; };
+		D2DE186E135B423800F2156D /* TOWorkIntervall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOWorkIntervall.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				D2DE186E135B423800F2156D /* TOWorkIntervall.h */,
-				D2DE186F135B423800F2156D /* TOWorkIntervall.m */,
+				D2376F1A14B460FE00F0CF4F /* TOWorkIntervall.m */,
 				D2DE1860135B401500F2156D /* TOWorkCounterDocument.h */,
 				D2DE1861135B401500F2156D /* TOWorkCounterDocument.m */,
 				D2DE1863135B401500F2156D /* TOWorkCounterDocument.xib */,
@@ -135,6 +135,9 @@
 /* Begin PBXProject section */
 		D2DE1841135B401500F2156D /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = D2DE1844135B401500F2156D /* Build configuration list for PBXProject "WorkCounter" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -173,7 +176,7 @@
 			files = (
 				D2DE185C135B401500F2156D /* main.m in Sources */,
 				D2DE1862135B401500F2156D /* TOWorkCounterDocument.m in Sources */,
-				D2DE1870135B423800F2156D /* TOWorkIntervall.m in Sources */,
+				D2376F1B14B460FE00F0CF4F /* TOWorkIntervall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +299,7 @@
 				D2DE186D135B401600F2156D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
